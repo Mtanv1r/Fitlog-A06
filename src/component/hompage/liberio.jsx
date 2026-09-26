@@ -1,32 +1,73 @@
-import JsxPragma from 'next/dist/build/babel/plugins/jsx-pragma';
-import React from 'react';
+// import JsxPragma from 'next/dist/build/babel/plugins/jsx-pragma';
+// import React from 'react';
 
-import HomeCard from '../cards/homeCard';
-
-
-
-// data fetching part
-const getInfo = async()=>{
-    const res=await fetch(" https://api.abcz.workers.dev/api/fitlog");
-    const data=await res.json()
-    return data
-}
+// import HomeCard from '../cards/homeCard';
 
 
-const liberio = async () => {
-    const arrInfo=await getInfo()
-    return (
-        <>
-        <div className="container mx-auto flex flex-col justify-center items-center mt-10">
-               <h1 className="text-6xl font-bold">The Library</h1>
-            <p className="text-3xl text-gray-500">Tweleve lift covering every major muscle group</p>
-        </div>
-        <div    className="container mx-auto my-[70px] grid grid-cols-3 gap-3">
-          {arrInfo.map((elm,idx)=><HomeCard   elm={elm} key={idx}></HomeCard>)}
-        </div>
-        </>
+
+// // data fetching part
+// const getInfo = async()=>{
+//     const res=await fetch(" https://api.abcz.workers.dev/api/fitlog");
+//     const data=await res.json()
+//     return data
+// }
+
+
+// const liberio = async () => {
+//     const arrInfo=await getInfo()
+//     return (
+//         <>
+//         <div className="container mx-auto flex flex-col justify-center items-center mt-10">
+//                <h1 className="text-6xl font-bold">The Library</h1>
+//             <p className="text-3xl text-gray-500">Tweleve lift covering every major muscle group</p>
+//         </div>
+//         <div    className="container mx-auto my-[70px] grid grid-cols-3 gap-3">
+//           {arrInfo.map((elm,idx)=><HomeCard   elm={elm} key={idx}></HomeCard>)}
+//         </div>
+//         </>
        
-    );
+//     );
+// };
+
+// export default liberio;
+import React from "react";
+import HomeCard from "../cards/homeCard";
+
+const getInfo = async () => {
+  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+  const data = await res.json();
+  return data;
 };
 
-export default liberio;
+const Liberio = async () => {
+  const arrInfo = await getInfo();
+
+  return (
+    <>
+      <div className="container mx-auto flex flex-col items-center justify-center px-4 pt-10 text-center sm:px-6 md:px-8">
+        <h1 className="text-4xl font-bold uppercase sm:text-5xl md:text-6xl">
+          THE LIBRARY
+        </h1>
+
+        <p className="mt-3 text-base text-gray-500 sm:text-xl md:text-2xl">
+          Twelve lifts covering every major muscle group.
+        </p>
+      </div>
+
+      <div
+        id="library"
+        className="
+          container mx-auto my-12 grid grid-cols-1 gap-5 px-4
+          sm:grid-cols-2 sm:px-6
+          lg:grid-cols-3 lg:px-8
+        "
+      >
+        {arrInfo.map((elm) => (
+          <HomeCard elm={elm} key={elm.id} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Liberio;
