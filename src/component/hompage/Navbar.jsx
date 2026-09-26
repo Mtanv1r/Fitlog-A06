@@ -12,8 +12,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="container mx-auto">
-      <nav className="w-full border-b border-gray-800 bg-black">
+    <div className="w-full border-b border-gray-800 bg-black">
+      <nav className="container mx-auto">
         <div
           className="
             mx-auto flex min-h-16 items-center justify-between
