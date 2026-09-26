@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 import PlanBtn from "../btns/navbtns/planBtn";
 import SaveBtn from "../btns/navbtns/saveBtn";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -22,14 +23,23 @@ const Navbar = () => {
             md:px-8
           "
         >
-          {/* Left - Logo */}
+        
           <div className="shrink-0">
             <Link href="/">
-              <img
-                src="/Img.png"
-                alt="Logo"
-                className="h-8 w-auto sm:h-9 md:h-10"
-              />
+
+<div className="shrink-0">
+  <Link href="/">
+    <Image
+      src="/logo.png"
+      alt="FitLog Logo"
+      width={120}
+      height={40}
+      priority
+      className="h-8 w-auto sm:h-9 md:h-10"
+    />
+  </Link>
+</div>
+
             </Link>
           </div>
 
