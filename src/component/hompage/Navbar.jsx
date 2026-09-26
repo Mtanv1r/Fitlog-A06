@@ -68,7 +68,7 @@ const Navbar = () => {
                 }
               `}
             >
-              Workout
+              Workout not
             </Link>
 
             <Link
