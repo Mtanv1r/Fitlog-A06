@@ -15,7 +15,9 @@ const Navbar = () => {
   // const{todayCard}=useContext(CardContext)
 
   return (
-    <nav className="w-full border-b bg-gray-900">
+    <div className="container mx-auto">
+
+   <nav className="w-full border-b bg-black">
       <div className="mx-auto flex h-16 items-center justify-between px-8">
 
         {/* Left - Logo */}
@@ -31,14 +33,14 @@ const Navbar = () => {
       
         <div className="flex items-center gap-4">
               <Link href={'/workout'}>
-                <button className="rounded-md px-5 py-2 font-medium hover:bg-gray-100">
+                <button className="rounded-md px-5 py-2 font-medium hover:border-green-500 border-2">
             Workout
           </button>
               
               </Link>
            <Link href={'/myplan'}>
               
-              <button className="rounded-md px-5 py-2 font-medium hover:bg-gray-100">
+              <button className="rounded-md px-5 py-2 font-medium hover:border-green-500 border-2">
             My Plan
           </button>
               </Link>
@@ -68,6 +70,10 @@ const Navbar = () => {
 
       </div>
     </nav>
+
+
+    </div>
+ 
   );
 };
 

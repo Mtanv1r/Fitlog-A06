@@ -10,7 +10,7 @@ const PlanBtn = () => {
     return (
         <div>
   <button className="font-medium">
-            Plan <span className="ml-1 text-gray-500">{todayCard.length}</span>
+            Plan <span className="ml-1 text-gray-500  text-green-600">{todayCard.length}</span>
           </button>
         </div>
     );
