@@ -24,7 +24,7 @@ const DetailCard = ({ NthInfo }) => {
     <section className="min-h-screen bg-black px-4 py-10 text-white sm:px-6 sm:py-12 md:px-10 md:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12">
 
-        {/* Left */}
+        
         <div className="overflow-hidden rounded-2xl bg-zinc-900">
           <img
             src={image}
@@ -44,7 +44,7 @@ const DetailCard = ({ NthInfo }) => {
             {description}
           </p>
 
-          {/* Tags */}
+          
           <div className="mt-5 flex flex-wrap gap-2 sm:mt-6">
             {muscleGroups.map((muscle, index) => (
               <span
@@ -56,7 +56,7 @@ const DetailCard = ({ NthInfo }) => {
             ))}
           </div>
 
-          {/* Key Specs */}
+       
           <div className="mt-7 sm:mt-8">
             <h2 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-zinc-500">
               Key Specs
