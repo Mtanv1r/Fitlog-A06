@@ -27,8 +27,8 @@ const Navbar = () => {
           <div className="shrink-0">
             <Link href="/">
 
-<div className="shrink-0">
-  <Link href="/">
+<div className="shrink-0 ">
+  <Link href="/" className="flex gap-2 items-center justify-evenly">
     <Image
       src="/logo.png"
       alt="FitLog Logo"
@@ -37,6 +37,9 @@ const Navbar = () => {
       priority
       className="h-8 w-auto sm:h-9 md:h-10"
     />
+      <span className="text-lg font-bold text-white sm:text-xl md:text-2xl">
+      FITLOG
+    </span>
   </Link>
 </div>
 
