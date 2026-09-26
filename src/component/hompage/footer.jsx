@@ -1,6 +1,9 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+
 
 const Footer = () => {
   return (
@@ -12,11 +15,14 @@ const Footer = () => {
           href="/"
           className="flex items-center gap-2"
         >
-          <img
-            src="/Img.png"
-            alt="FitLog Logo"
-            className="h-8 w-auto sm:h-9"
-          />
+           <Image
+      src="/logo.png"
+      alt="FitLog Logo"
+      width={120}
+      height={40}
+      priority
+      className="h-8 w-auto sm:h-9 md:h-10"
+    />
 
           <span className="text-xl font-bold tracking-wider sm:text-2xl">
             FITLOG

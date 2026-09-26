@@ -46,7 +46,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Middle - Navigation */}
+        
           <div
             className="
               flex items-center gap-1
@@ -68,7 +68,7 @@ const Navbar = () => {
                 }
               `}
             >
-              Workout not
+              Workout
             </Link>
 
             <Link
